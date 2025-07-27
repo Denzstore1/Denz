@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HACKED BY DENZ</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+      height: 100vh;
+      font-family: monospace;
+      color: #0ff;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #00bfff;
+    }
+
+    .profile {
+      margin-top: 40px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid #00bfff;
+      box-shadow: 0 0 20px #00bfff;
+    }
+
+    .animated-text {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00bfff;
+      }
+      to {
+        text-shadow: 0 0 20px #00bfff;
+      }
+    }
+
+    .char-span {
+      opacity: 0;
+      animation: fadeIn 0.1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .text-bawah {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #0ff;
+      animation: gerakText 3s linear infinite alternate;
+    }
+
+    @keyframes gerakText {
+      from { letter-spacing: 2px; color: #00bfff; }
+      to { letter-spacing: 5px; color: #0ff; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas efek hujan kode -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- Konten utama -->
+  <div class="content">
+    <div class="profile">
+      <img src="https://files.catbox.moe/jrivnf.jpg" alt="Profil" />
+    </div>
+
+    <h1 class="animated-text" id="judulText"></h1>
+
+    <p class="text-bawah"> Твой телефон был взломан красавчиком DENZ, и теперь ты должен сказать ему «я тебя люблю», иначе твой телефон будет контролироваться DENZ.</p>
+  </div>
+      </div>
+
+    <h1 class="animated-text" id="judulText"></h1>
+
+    <p class="text-bawah">𝐓𝐀𝐏𝐈 𝐁𝐎𝐎𝐍𝐆 𝐘𝐀𝐇𝐀𝐇𝐀</p>
+  </div>
+  
+<div style="text-align: center; margin-top: 100px;">
+  <audio controls autoplay loop style="filter: drop-shadow(0 0 10px #00ccff);">
+    <source src="https://files.catbox.moe/gh8ent.mp4" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+  
+<p style="text-align: center; color: #00ccff; font-size: 16px; margin-top: 10px; position: relative; z-index: 10;">
+  𝚃𝙴𝙽𝙰𝙽𝙶 𝙲𝚄𝙼𝙰 𝙱𝙾𝙾𝙽𝙶𝙰𝙽 😆
+</p>
+</div>
+  <script>
+    // Matrix effect warna biru tua menyala
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = "01<>/ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00bfff"; // BIRU TUA menyala
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+
+        ctx.fillText(text, x, y);
+
+        if (y > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(drawMatrix, 33);
+
+    // Efek teks muncul satu-satu
+    const judul = "HACKED BY DENZ";
+    const judulEl = document.getElementById("judulText");
+
+    judul.split("").forEach((char, index) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.className = "char-span";
+      span.style.animationDelay = `${index * 0.1}s`;
+      judulEl.appendChild(span);
+    });
+  </script>
+  <script>
+  // Anti klik kanan dan keyboard
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => e.preventDefault());
+
+  // Matrix Effect
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const letters = "DENZHACKED0101".split("");
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array.from({length: columns}).fill(1);
+
+  function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00f0ff";
+    ctx.font = fontSize + "px monospace";
+
+    drops.forEach((y, i) => {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      const x = i * fontSize;
+      ctx.fillText(text, x, y * fontSize);
+
+      if (y * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    });
+  }
+
+  setInterval(drawMatrix, 30);
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+.gabungan-animasi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.gabungan-animasi span {
+  opacity: 0;
+  color: #0033cc;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+  animation: fadeKetik 0.3s forwards;
+}
+
+.gabungan-animasi span:nth-child(1) { animation-delay: 0.1s; }
+.gabungan-animasi span:nth-child(2) { animation-delay: 0.2s; }
+.gabungan-animasi span:nth-child(3) { animation-delay: 0.3s; }
+.gabungan-animasi span:nth-child(4) { animation-delay: 0.4s; }
+.gabungan-animasi span:nth-child(5) { animation-delay: 0.5s; }
+.gabungan-animasi span:nth-child(6) { animation-delay: 0.6s; }
+.gabungan-animasi span:nth-child(7) { animation-delay: 0.7s; }
+.gabungan-animasi span:nth-child(8) { animation-delay: 0.8s; }
+.gabungan-animasi span:nth-child(9) { animation-delay: 0.9s; }
+.gabungan-animasi span:nth-child(10) { animation-delay: 1.0s; }
+.gabungan-animasi span:nth-child(11) { animation-delay: 1.1s; }
+.gabungan-animasi span:nth-child(12) { animation-delay: 1.2s; }
+.gabungan-animasi span:nth-child(13) { animation-delay: 1.3s; }
+.gabungan-animasi span:nth-child(14) { animation-delay: 1.4s; }
+.gabungan-animasi span:nth-child(15) { animation-delay: 1.5s; }
+.gabungan-animasi span:nth-child(16) { animation-delay: 1.6s; }
+.gabungan-animasi span:nth-child(17) { animation-delay: 1.7s; }
+.gabungan-animasi span:nth-child(18) { animation-delay: 1.8s; }
+.gabungan-animasi span:nth-child(19) { animation-delay: 1.9s; }
+.gabungan-animasi span:nth-child(20) { animation-delay: 2.0s; }
+.gabungan-animasi span:nth-child(21) { animation-delay: 2.1s; }
+.gabungan-animasi span:nth-child(22) { animation-delay: 2.2s; }
+.gabungan-animasi span:nth-child(23) { animation-delay: 2.3s; }
+.gabungan-animasi span:nth-child(24) { animation-delay: 2.4s; }
+.gabungan-animasi span:nth-child(25) { animation-delay: 2.5s; }
+.gabungan-animasi span:nth-child(26) { animation-delay: 2.6s; }
+.gabungan-animasi span:nth-child(27) { animation-delay: 2.7s; }
+.gabungan-animasi span:nth-child(28) { animation-delay: 2.8s; }
+
+@keyframes fadeKetik {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.typewriter h2 {
+  overflow: hidden;
+  border-right: 2px solid #00ccff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff;
+  font-size: 18px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: #00f0ff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #00f0ff;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #00f0ff }
+}
